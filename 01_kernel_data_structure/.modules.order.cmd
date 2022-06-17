@@ -1,0 +1,1 @@
+cmd_/home/durid/projects/os-practice/01_kernel_data_structure/modules.order := {   echo /home/durid/projects/os-practice/01_kernel_data_structure/birthday_module.ko; :; } | awk '!x[$$0]++' - > /home/durid/projects/os-practice/01_kernel_data_structure/modules.order

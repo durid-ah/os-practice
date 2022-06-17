@@ -1,0 +1,1 @@
+cmd_/home/durid/projects/os-practice/01_kernel_data_structure/Module.symvers := sed 's/\.ko$$/\.o/' /home/durid/projects/os-practice/01_kernel_data_structure/modules.order | scripts/mod/modpost -m -a  -o /home/durid/projects/os-practice/01_kernel_data_structure/Module.symvers -e -i Module.symvers   -T -
