@@ -1,1 +1,0 @@
-cmd_/home/durid/projects/os-practice/01_kernel_module/modules.order := {   echo /home/durid/projects/os-practice/01_kernel_module/first_kernel_module.ko; :; } | awk '!x[$$0]++' - > /home/durid/projects/os-practice/01_kernel_module/modules.order

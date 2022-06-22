@@ -1,1 +1,0 @@
-cmd_/home/durid/projects/os-practice/01_kernel_data_structure/birthday_module.mod := { echo  /home/durid/projects/os-practice/01_kernel_data_structure/birthday_module.o;  echo; } > /home/durid/projects/os-practice/01_kernel_data_structure/birthday_module.mod

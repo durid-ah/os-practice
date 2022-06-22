@@ -27,7 +27,7 @@ int simple_init(void) {
    person->year = 1995;
    INIT_LIST_HEAD(&person->list);
 
-   for (i = 1; i < 5; i++) {
+   for (i = 1; i <= 5; i++) {
       struct birthday *new_tail;
       new_tail = kmalloc(sizeof(*new_tail), GFP_KERNEL);
       new_tail->day = i;
@@ -44,7 +44,6 @@ int simple_init(void) {
 
 
    printk(KERN_INFO "Loading Module\n");
-   printk(KERN_INFO "Number: %d\n", 10);
    return 0;
 }
 
