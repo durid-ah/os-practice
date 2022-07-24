@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/durid/projects/os-practice'
+make: Leaving directory '/home/durid/projects/os-practice'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

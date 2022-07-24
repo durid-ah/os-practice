@@ -1,0 +1,41 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/durid/projects/os-practice/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+MAX_LINE	03_shell/c_shell.c	/^#define MAX_LINE /;"	d	file:
+all	02_kernel_data_structure/Makefile	/^all:$/;"	t
+all	02_kernel_module/Makefile	/^all:$/;"	t
+all	make_file_tut/Makefile	/^all: clean blah some_file$/;"	t
+birthday	02_kernel_data_structure/birthday_module.c	/^struct birthday {$/;"	s	file:
+blah	make_file_tut/Makefile	/^blah: blah.o$/;"	t
+blah.c	make_file_tut/Makefile	/^blah.c:$/;"	t
+blah.o	make_file_tut/Makefile	/^blah.o: blah.c$/;"	t
+blah_files	make_file_tut/Makefile	/^blah_files := $(wildcard blah*)$/;"	m
+clean	02_kernel_data_structure/Makefile	/^clean:$/;"	t
+clean	02_kernel_module/Makefile	/^clean:$/;"	t
+clean	make_file_tut/Makefile	/^clean:$/;"	t
+day	02_kernel_data_structure/birthday_module.c	/^   int day;$/;"	m	struct:birthday	typeref:typename:int	file:
+first_wild_card	make_file_tut/Makefile	/^first_wild_card:$/;"	t
+hey	make_file_tut/Makefile	/^hey: one two$/;"	t
+list	02_kernel_data_structure/birthday_module.c	/^   struct list_head list;$/;"	m	struct:birthday	typeref:struct:list_head	file:
+main	03_processes/process_fork.c	/^int main() {$/;"	f	typeref:typename:int
+main	03_shell/c_shell.c	/^int main(void) {$/;"	f	typeref:typename:int
+month	02_kernel_data_structure/birthday_module.c	/^   int month;$/;"	m	struct:birthday	typeref:typename:int	file:
+one	make_file_tut/Makefile	/^one:$/;"	t
+person	02_kernel_data_structure/birthday_module.c	/^struct birthday *person;$/;"	v	typeref:struct:birthday *
+simple_exit	02_kernel_data_structure/birthday_module.c	/^void simple_exit(void) {$/;"	f	typeref:typename:void
+simple_exit	02_kernel_module/first_kernel_module.c	/^void simple_exit(void) {$/;"	f	typeref:typename:void
+simple_init	02_kernel_data_structure/birthday_module.c	/^int simple_init(void) {$/;"	f	typeref:typename:int
+simple_init	02_kernel_module/first_kernel_module.c	/^int simple_init(void) {$/;"	f	typeref:typename:int
+some_file	make_file_tut/Makefile	/^some_file:$/;"	t
+thing	make_file_tut/Makefile	/^thing := $(wildcard blah*) # displays all files that start with blah$/;"	m
+two	make_file_tut/Makefile	/^two:$/;"	t
+x	make_file_tut/Makefile	/^x := he he hey$/;"	m
+year	02_kernel_data_structure/birthday_module.c	/^   int year;$/;"	m	struct:birthday	typeref:typename:int	file:

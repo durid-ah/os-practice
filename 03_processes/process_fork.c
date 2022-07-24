@@ -11,9 +11,11 @@ int main() {
         return 1;
     }
     else if (pid == 0) {
+        // child process
         execlp("/bin/ls", "ls", NULL);
     }
     else {
+        // process
         wait(NULL);
         printf("Child Complete");
     }
