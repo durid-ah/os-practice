@@ -5,8 +5,18 @@
 
 #define MAX_LINE 80 // Maximum length command
 
-void parse_input(char* input[], char* args[]) {
-    printf("%s", *input);
+int parse_input(char input[], char* args[]) {
+    input[strcspn(input, "\n")] = 0;
+    // TODO: strtok_r? 
+    char* arg = strtok(input, " ");
+    int i = 0;
+    while (arg != NULL) {
+        args[i] = arg;
+        arg = strtok(NULL, " ");
+        i++;
+    }
+
+    return i;
 }
 
 int main(void) {
@@ -21,14 +31,14 @@ int main(void) {
         fflush(stdout);
         fgets(str, MAX_LINE, stdin);
 
-        parse_input(&str, &args);
-        // str[strcspn(str, "\n")] = 0;
-        // char* arg = strtok(str, " ");
+        int arg_count = parse_input(str, args);
 
-        // while (arg != NULL) {
-        //     printf("'%s'\n", arg);
-        //     arg = strtok(NULL, " ");
-        // }
+        int y = 0;
+        while (y < arg_count) {
+            printf("ret: %s \n", args[y]);
+            y++;
+        }
+
 
         /**
          * fork
