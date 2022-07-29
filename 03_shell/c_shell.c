@@ -6,6 +6,17 @@
 
 #define MAX_LINE 80 // Maximum length command
 
+struct Entry {
+    int index;
+    char* command;
+};
+
+struct History {
+    int start;
+    int end;
+    struct Entry history[10];
+};
+
 int parse_input(char input[], char command[], char* args[]) {
     // remove trailing \n
     input[strcspn(input, "\n")] = 0;
