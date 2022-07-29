@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sat Jul 23 21:07:09 2022
+# Make data base, printed on Thu Jul 28 12:35:25 2022
 
 # Variables
 
@@ -23,8 +23,6 @@ SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-9afe963a-89b7-4fb0-8371-6ae28b6a37f3.sock
-# environment
 VSCODE_CWD = /home/durid/projects/os-practice
 # default
 MAKE_COMMAND := make
@@ -35,7 +33,7 @@ QT_ACCESSIBILITY = 1
 # environment
 SNAP_INSTANCE_NAME = code
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/99/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/102/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -47,33 +45,29 @@ PWD = /home/durid/projects/os-practice
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
 # environment
-OLDPWD = /home/durid/projects
+OLDPWD = /home/durid
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
-# environment
-VSCODE_LOG_STACK = false
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/durid/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
+VSCODE_CODE_CACHE_PATH = /home/durid/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.DKCJP1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.63QBQ1
 # default
 .LOADED := 
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.102
+GNOME_TERMINAL_SERVICE = :1.95
 # makefile
 MAKEFLAGS = pqrR
 # makefile
 CURDIR := /home/durid/projects/os-practice
 # environment
-VSCODE_PIPE_LOGGING = true
-# environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # automatic
@@ -99,15 +93,13 @@ SNAP_REEXEC =
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_VERBOSE_LOGGING = true
-# environment
-VSCODE_PID = 19026
+VSCODE_PID = 2492
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/durid-virtual-machine:@/tmp/.ICE-unix/1186,unix/durid-virtual-machine:/tmp/.ICE-unix/1186
+SESSION_MANAGER = local/durid-virtual-machine:@/tmp/.ICE-unix/1225,unix/durid-virtual-machine:/tmp/.ICE-unix/1225
 # automatic
 *F = $(notdir $*)
 # environment
@@ -131,7 +123,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/ae3f68a1_4ce1_4b1d_ba89_51e7d5b0cfdf
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/2a643c3d_5d12_4d0c_80c8_335b86638b11
 # environment
 MAKELEVEL := 0
 # default
@@ -147,13 +139,11 @@ MAKEFILES :=
 # environment
 SNAP_USER_COMMON = /home/durid/snap/code/common
 # environment
-SNAP = /snap/code/99
+SNAP = /snap/code/102
 # environment
-SNAP_REVISION = 99
+SNAP_REVISION = 102
 # environment
 SNAP_REAL_HOME = /home/durid
-# environment
-VSCODE_LOG_NATIVE = false
 # environment
 USERNAME = durid
 # environment
@@ -181,7 +171,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 2348
+SYSTEMD_EXEC_PID = 1242
 # environment
 DISPLAY = :0
 # environment
@@ -193,7 +183,7 @@ MAKE_VERSION := 4.3
 # environment
 DISABLE_WAYLAND = 1
 # environment
-SNAP_DATA = /var/snap/code/99
+SNAP_DATA = /var/snap/code/102
 # environment
 SNAP_CONTEXT = MAdyarswWzPggq0UhOIJyzwqKw6j0dOl3rsVx0lAJsDVJ1iBnFz_
 # environment
@@ -213,13 +203,13 @@ QT_IM_MODULE = ibus
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-dfc3d667-1.68.1-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-dfc3d667-1.69.2-main.sock
 # environment
 TERM = xterm-256color
 # environment
 SNAP_NAME = code
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/99/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/102/usr/share/glib-2.0/schemas
 # environment
 IM_CONFIG_PHASE = 1
 # default
@@ -227,7 +217,7 @@ IM_CONFIG_PHASE = 1
 # automatic
 <F = $(notdir $<)
 # environment
-SNAP_VERSION = 30d9c6cd
+SNAP_VERSION = 3b889b09
 # default
 SUFFIXES := 
 # environment
@@ -241,7 +231,7 @@ SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
 # environment
-SNAP_USER_DATA = /home/durid/snap/code/99
+SNAP_USER_DATA = /home/durid/snap/code/102
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -249,7 +239,7 @@ GDMSESSION = ubuntu
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=118/1024=12%, Rehash=0, Collisions=11/145=8%
+# Load=113/1024=11%, Rehash=0, Collisions=10/140=7%
 
 # Pattern-specific Variable Values
 
@@ -279,7 +269,6 @@ Makefile:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
- 
 
 # Not a target:
 all:
@@ -290,6 +279,7 @@ all:
 
 # Not a target:
 makefile:
+ 
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
@@ -316,6 +306,6 @@ GNUmakefile:
 # strcache performance: lookups = 24 / hit rate = 12%
 # hash-table stats:
 # Load=21/8192=0%, Rehash=0, Collisions=0/24=0%
-# Finished Make data base on Sat Jul 23 21:07:09 2022
+# Finished Make data base on Thu Jul 28 12:35:25 2022
 
  
