@@ -17,7 +17,7 @@ struct History {
     struct Entry history[10];
 };
 
-int parse_input(char input[], char command[], char* args[]) {
+int parse_input(char input[], char* args[]) {
     // remove trailing \n
     input[strcspn(input, "\n")] = 0;
     
@@ -42,13 +42,12 @@ int main(void) {
     while (should_run) {
         pid_t pid;
         char str[MAX_LINE];
-        char command[MAX_LINE];
 
         printf("osh > ");
         fflush(stdout);
         fgets(str, MAX_LINE, stdin);
 
-        int arg_count = parse_input(str, command, args);
+        int arg_count = parse_input(str, args);
 
         /**
          * fork
@@ -60,7 +59,6 @@ int main(void) {
             fprintf(stderr, "Fork Failed");
         } else if (pid == 0) {
             execvp(args[0], args);
-            fflush(stdout);
             return 0;
         } else {
             wait(NULL);
