@@ -51,15 +51,12 @@ void print_history(struct History *history) {
     }   
 }
 
-int parse_input(char input[], char command[], char* args[]) {
+int parse_input(char input[], char* args[]) {
     
     // remove trailing \n
-    input[strcspn(input, "\n")] = 0;
-    printf("%s\n", input);
-    
+    input[strcspn(input, "\n")] = 0;    
     // get the command
     char* arg = strtok(input, " ");
-
     // get the other args
     int i = 0;
     while (arg != NULL) {
@@ -92,22 +89,12 @@ int main(void) {
         pid_t pid;
         // char* str = (char *)malloc(MAX_LINE * sizeof(char));
         char str[MAX_LINE];
-        char command[MAX_LINE];
 
         printf("osh > ");
         fflush(stdout);
         fgets(str, MAX_LINE, stdin);
 
-        int arg_count = parse_input(str, command, args);
-
-        for (size_t i = 0; i < ARG_LENGTH; i++)
-        {
-            if (args[i] != NULL)
-                printf("%s\n", args[i]);
-            else
-                printf("NULL");
-        }
-        
+        int arg_count = parse_input(str, args);        
 
         pid = fork();
         if (pid < 0) {
@@ -124,7 +111,6 @@ int main(void) {
         } else {
             // parent
             pid_t s = wait(&status);
-            printf("%d", WEXITSTATUS(status));
         }
 
     }
