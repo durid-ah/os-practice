@@ -87,8 +87,7 @@ int main(void) {
     int status = 0;
     while (should_run) {
         pid_t pid;
-        // char* str = (char *)malloc(MAX_LINE * sizeof(char));
-        char str[MAX_LINE];
+        char* str = (char *)malloc(MAX_LINE * sizeof(char));
 
         printf("osh > ");
         fflush(stdout);
