@@ -5,8 +5,7 @@
 
 struct Entry {
     int index;
-    char* command;
-    char* args;
+    char** args;
 };
 
 struct History {
@@ -22,15 +21,27 @@ struct History {
  */
 void add_entry(struct History *history, struct Entry *entry) {
     int idx = (history->start + history->capacity) % MAX_HISTORY;
+    entry->index = idx + 1;
     if (history->capacity < MAX_HISTORY) {
         history->capacity++;
         history->end = history->capacity;
     } else {
         history->start++;
         history->end++;
+        free(history->history[idx].args);
     }
 
     history->history[idx] = *entry;
+}
+
+void print_array(char** args) {
+    size_t i = 0;
+    char* val = args[i];
+    while (val != NULL) {
+        printf("%s ", val);
+        i++;
+        val = args[i];
+    }
 }
 
 /**
@@ -40,8 +51,11 @@ void print_history(struct History *history) {
     int i = history->start;
 
     while (i < history->end) {
-        printf("%d. %s\n", history->history[i % MAX_HISTORY].index, history->history[i % MAX_HISTORY].command);
+        printf("%d. ", history->history[i % MAX_HISTORY].index);
+        print_array(history->history[i % MAX_HISTORY].args);
+        printf("\n");
         i = ++i;
     }
     
+    fflush(stdout);
 }

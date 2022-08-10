@@ -28,17 +28,8 @@ int parse_input(char input[], char* args[]) {
     return i;
 }
 
-void copy_args(char* from[], char* to) {
-    for (size_t i = 0; i < ARG_LENGTH; i++)
-    {
-        // strncpy(to[i], from[i]);
-    }
-    
-}
-
 
 int main(void) {
-    char* args[ARG_LENGTH];
     int should_run = 1; // flag to determine when to exit program
 
     struct History history = { 0, 1, 0 };
@@ -52,14 +43,22 @@ int main(void) {
         fflush(stdout);
         fgets(str, MAX_LINE, stdin);
 
-        int arg_count = parse_input(str, args);        
+        struct Entry entry;
+        entry.args = (char **)malloc(ARG_LENGTH * sizeof(char*));
+        int arg_count = parse_input(str, entry.args);
+        add_entry(&history, &entry);
 
         pid = fork();
         if (pid < 0) {
             fprintf(stderr, "Fork Failed");
         } else if (pid == 0) {
             // child
-            int res = execvp(args[0], args);
+            if (strcmp(entry.args[0],"history") == 0) {
+                print_history(&history);
+                return 0;
+            }
+
+            int res = execvp(entry.args[0], entry.args);
             if (res == -1) {
                 return 1;
             }
