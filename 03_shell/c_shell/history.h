@@ -16,7 +16,10 @@ struct History {
     struct Entry history[MAX_HISTORY];
 };
 
-
+/**
+ * @brief add a new entry into the history array, if there are already
+ * `MAX_HISTORY` number of entries it will overwrite the oldest entry
+ */
 void add_entry(struct History *history, struct Entry *entry) {
     int idx = (history->start + history->capacity) % MAX_HISTORY;
     if (history->capacity < MAX_HISTORY) {
@@ -30,6 +33,9 @@ void add_entry(struct History *history, struct Entry *entry) {
     history->history[idx] = *entry;
 }
 
+/**
+ * @brief print out all the entries in the history array
+ */
 void print_history(struct History *history) {
     int i = history->start;
 
@@ -38,16 +44,4 @@ void print_history(struct History *history) {
         i = ++i;
     }
     
-}
-
-int main(void) {
-    struct History history = {0, 0, 0};
-
-    for (size_t i = 0; i < 21; i++)
-    {
-        struct Entry nentry = {i + 1, "stuff", NULL};
-        add_entry(&history, &nentry);
-    }   
-
-    print_history(&history);
 }
