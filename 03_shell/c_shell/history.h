@@ -5,6 +5,7 @@
 
 struct Entry {
     int index;
+    char * arg_str;
     char** args;
 };
 
@@ -28,7 +29,10 @@ void add_entry(struct History *history, struct Entry *entry) {
     } else {
         history->start++;
         history->end++;
+        history->start = history->start % MAX_HISTORY;
+        history->end = history->end % (MAX_HISTORY + 1);
         free(history->history[idx].args);
+        free(history->history[idx].arg_str);
     }
 
     history->history[idx] = *entry;
@@ -50,7 +54,7 @@ void print_array(char** args) {
 void print_history(struct History *history) {
     int i = history->start;
 
-    while (i < history->end) {
+    while (i != history->end) {
         printf("%d. ", history->history[i % MAX_HISTORY].index);
         print_array(history->history[i % MAX_HISTORY].args);
         printf("\n");
@@ -59,3 +63,22 @@ void print_history(struct History *history) {
     
     fflush(stdout);
 }
+
+void free_history(struct History *history) {
+    int i = history->start;
+
+    while (i != history->end) {
+        printf("%d. ", history->history[i % MAX_HISTORY].index);
+        print_array(history->history[i % MAX_HISTORY].args);
+        printf("\n");
+
+        free(history->history[i].args);
+        free(history->history[i].arg_str);
+
+        ++i;
+        i = i % MAX_HISTORY;
+    }
+    
+    fflush(stdout);
+}
+

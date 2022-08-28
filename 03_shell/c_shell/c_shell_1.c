@@ -44,9 +44,14 @@ int main(void) {
         fgets(str, MAX_LINE, stdin);
 
         struct Entry entry;
+        entry.arg_str = str;
         entry.args = (char **)malloc(ARG_LENGTH * sizeof(char*));
-        int arg_count = parse_input(str, entry.args);
+        int arg_count = parse_input(entry.arg_str, entry.args);
         add_entry(&history, &entry);
+
+        if (strcmp(entry.args[0], "durid") == 0) {
+            break;
+        }
 
         pid = fork();
         if (pid < 0) {
@@ -56,7 +61,7 @@ int main(void) {
             if (strcmp(entry.args[0],"history") == 0) {
                 print_history(&history);
                 return 0;
-            }
+            } 
 
             int res = execvp(entry.args[0], entry.args);
             if (res == -1) {
@@ -69,6 +74,7 @@ int main(void) {
             // parent
             pid_t s = wait(&status);
         }
-
     }
+
+    free_history(&history);
 }
