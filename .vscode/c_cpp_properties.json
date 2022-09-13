@@ -6,7 +6,10 @@
                 "${workspaceFolder}/**",
                 "/usr/include"
             ],
-            "defines": [],
+            "defines": [
+                "__GNUC__",
+                "__KERNEL__"
+            ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",
             "cppStandard": "c++17",
