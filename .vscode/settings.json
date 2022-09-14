@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "init.h": "c",
-        "sched.h": "c"
+        "sched.h": "c",
+        "stdbool.h": "c"
     }
 }
